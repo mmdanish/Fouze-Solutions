@@ -2,6 +2,12 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 
 const Hero = () => {
+  const scrollToAnalytics = () => {
+    const analyticsSection = document.getElementById("analytics");
+    if (analyticsSection) {
+      analyticsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="text-white">
       <div className="max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
@@ -27,7 +33,10 @@ const Hero = () => {
           Unlock the potential of data to optimize marketing strategies and
           boost business performance.
         </p>
-        <button className="bg-[#00df9a] w-[180px] md:w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">
+        <button
+          className="bg-[#00df9a] w-[180px] md:w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-300"
+          onClick={scrollToAnalytics}
+        >
           Learn More
         </button>
       </div>

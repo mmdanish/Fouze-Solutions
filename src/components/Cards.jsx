@@ -1,48 +1,71 @@
-import React from 'react'
-import Single from '../assets/single.png'
-import Double from '../assets/double.png'
-import Triple from '../assets/triple.png'
+import React from "react";
 
 const Cards = () => {
   return (
-    <div className='w-full py-[10rem] px-4 bg-white'>
-      <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
-        <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
-            <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="/" />
-            <h2 className='text-2xl font-bold text-center py-8'>Single User</h2>
-            <p className='text-center text-4xl font-bold'>$149</p>
-            <div className='text-center font-medium'>
-                <p className='py-2 border-b mx-8 mt-8'>500 GB Storage</p>
-                <p className='py-2 border-b mx-8'>1 Granted User</p>
-                <p className='py-2 border-b mx-8'>Send up to 2 GB</p>
-            </div>
-            <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Start Trial</button>
+    <div className="w-full py-[5rem] px-4 bg-white">
+      {/* Heading */}
+      <div className="max-w-[1240px] mx-auto text-center mb-8">
+        <h1 className="text-4xl text-center font-bold">
+          Why Partner with Fouze Solutions?
+        </h1>
+        <p className="text-lg text-gray-600 mt-4">
+          Discover how our expertise can elevate your business and create a
+          lasting impact. We offer tailored solutions that drive success.
+        </p>
+      </div>
+      {/* Cards Section */}
+      <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 py-[3rem] gap-8">
+        <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
+          <div className="w-20 h-20 mx-auto mt-[-3rem] bg-[#00df9a] rounded-full flex items-center justify-center">
+            <i className="fas fa-chart-line text-white text-4xl"></i>
+          </div>
+          <h2 className="text-2xl font-bold text-center py-8">
+            Marketing Strategy
+          </h2>
+          <p className="text-center text-lg font-medium">
+            Tailored strategies that drive growth. Our data-driven approach
+            ensures your business reaches its full potential, delivering
+            measurable results.
+          </p>
+          <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+            Learn More
+          </button>
         </div>
-        <div className='w-full shadow-xl bg-gray-100 flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300'>
-            <img className='w-20 mx-auto mt-[-3rem] bg-transparent' src={Double} alt="/" />
-            <h2 className='text-2xl font-bold text-center py-8'>Dual Users</h2>
-            <p className='text-center text-4xl font-bold'>$149</p>
-            <div className='text-center font-medium'>
-                <p className='py-2 border-b mx-8 mt-8'>500 GB Storage</p>
-                <p className='py-2 border-b mx-8'>1 Granted User</p>
-                <p className='py-2 border-b mx-8'>Send up to 2 GB</p>
-            </div>
-            <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Start Trial</button>
+
+        <div className="w-full shadow-xl flex flex-col p-4 my-4 bg-gray-100 rounded-lg hover:scale-105 duration-300">
+          <div className="w-20 h-20 mx-auto mt-[-3rem] bg-black rounded-full flex items-center justify-center">
+            <i className="fas fa-bullhorn text-[#00df9a] text-4xl"></i>
+          </div>
+          <h2 className="text-2xl font-bold text-center py-8">
+            Branding & Identity
+          </h2>
+          <p className="text-center text-lg font-medium">
+            Build a powerful brand identity. We help you create a memorable
+            image and voice that resonates with your audience.
+          </p>
+          <button className="bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+            Learn More
+          </button>
         </div>
-        <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
-            <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Triple} alt="/" />
-            <h2 className='text-2xl font-bold text-center py-8'>Multiple Users</h2>
-            <p className='text-center text-4xl font-bold'>$149</p>
-            <div className='text-center font-medium'>
-                <p className='py-2 border-b mx-8 mt-8'>500 GB Storage</p>
-                <p className='py-2 border-b mx-8'>1 Granted User</p>
-                <p className='py-2 border-b mx-8'>Send up to 2 GB</p>
-            </div>
-            <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Start Trial</button>
+
+        <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
+          <div className="w-20 h-20 mx-auto mt-[-3rem] bg-[#00df9a] rounded-full flex items-center justify-center">
+            <i className="fas fa-user-friends text-white text-4xl"></i>
+          </div>
+          <h2 className="text-2xl font-bold text-center py-8">
+            Client Success
+          </h2>
+          <p className="text-center text-lg font-medium">
+            Proven success across industries. We work with you to achieve
+            measurable results, ensuring satisfaction at every step.
+          </p>
+          <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+            See Testimonials
+          </button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cards
+export default Cards;
