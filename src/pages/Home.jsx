@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Analytics from '../components/Analytics'
 import Explore from '../components/Explore'
 import Cards from '../components/Cards'
-import Footer from '../components/Footer'
+
 
 const Home = () => {
   return (
@@ -11,8 +11,7 @@ const Home = () => {
       <Hero />
       <Analytics />
       <Explore />
-      <Cards />
-      <Footer />
+      <Cards />    
     </div>
   )
 }

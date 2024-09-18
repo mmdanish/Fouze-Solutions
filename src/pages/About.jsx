@@ -1,4 +1,6 @@
 import React from "react";
+import Company from "../assets/company.png";
+
 
 const About = () => {
   return (
@@ -18,7 +20,7 @@ const About = () => {
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8 py-8">
         <img
           className="w-full h-full object-cover"
-          src="https://via.placeholder.com/600x400"
+          src={Company}
           alt="Fouze Solutions Office"
         />
         <div className="flex flex-col justify-center">
@@ -54,21 +56,21 @@ const About = () => {
           Why Choose Fouze Solutions
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mt-8">
-          <div className="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+          <div className="bg-gray-100 p-8 rounded-lg shadow-md text-center cursor-pointer hover:scale-105 duration-300">
             <h3 className="text-2xl font-bold">Expertise</h3>
             <p className="mt-4 text-gray-600">
               With years of industry experience, our consultants are experts in
               marketing, business growth, and operations optimization.
             </p>
           </div>
-          <div className="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+          <div className="bg-gray-100 p-8 rounded-lg shadow-md text-center cursor-pointer hover:scale-105 duration-300">
             <h3 className="text-2xl font-bold">Tailored Solutions</h3>
             <p className="mt-4 text-gray-600">
               Every business is unique, and so are our strategies. We deliver
               custom solutions based on in-depth analysis of your needs.
             </p>
           </div>
-          <div className="bg-gray-100 p-8 rounded-lg shadow-md text-center">
+          <div className="bg-gray-100 p-8 rounded-lg shadow-md text-center cursor-pointer hover:scale-105 duration-300">
             <h3 className="text-2xl font-bold">Proven Results</h3>
             <p className="mt-4 text-gray-600">
               We have helped numerous companies achieve measurable growth and
@@ -85,7 +87,7 @@ const About = () => {
             What Our Clients Say
           </h2>
           <div className="mt-8 grid md:grid-cols-2 gap-8">
-            <div className="p-4 shadow-lg">
+            <div className="p-4 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
               <p className="text-lg italic">
                 "Fouze Solutions helped us transform our marketing strategy and
                 achieve 50% growth in just 6 months. Their team is outstanding!"
@@ -94,7 +96,7 @@ const About = () => {
                 - John Doe, CEO of XYZ Corp
               </p>
             </div>
-            <div className="p-4 shadow-lg">
+            <div className="p-4 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
               <p className="text-lg italic">
                 "Their consultancy services streamlined our operations and
                 boosted efficiency across the board. We highly recommend them."
@@ -117,7 +119,7 @@ const About = () => {
         <button className="mt-6 bg-[#00df9a] text-black py-3 px-6 rounded-md hover:scale-105 transition-transform">
           Get in Touch
         </button>
-      </div>
+      </div>      
     </div>
   );
 };
