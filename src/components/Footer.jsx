@@ -44,18 +44,21 @@ const Footer = () => {
         <div>
           <h6 className="font-medium text-gray-400">Company</h6>
           <ul>
-            <li className="py-2 text-sm">About Us</li>
+            <li className="py-2 text-sm">
+              <a href="/about" className="hover:underline">
+                About Us
+              </a>
+            </li>
             <li className="py-2 text-sm">Careers</li>
-            <li className="py-2 text-sm">Contact</li>
             <li className="py-2 text-sm">Privacy Policy</li>
           </ul>
         </div>
         <div>
-          <h6 className="font-medium text-gray-400">Legal</h6>
+          <h6 className="font-medium text-gray-400">Contact Us</h6>
           <ul>
-            <li className="py-2 text-sm">Terms of Service</li>
-            <li className="py-2 text-sm">Cookie Policy</li>
-            <li className="py-2 text-sm">Disclaimer</li>
+            <li className="py-2 text-sm">Email: info@fouze.in</li>
+            <li className="py-2 text-sm">Tel: +91 483 2736488</li>
+            <li className="py-2 text-sm"><a href="/contact" className="hover:underline">Contact Page</a></li>
           </ul>
         </div>
       </div>

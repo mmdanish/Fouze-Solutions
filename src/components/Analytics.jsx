@@ -1,7 +1,13 @@
 import React from "react";
 import Laptop from "../assets/laptop.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Analytics = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/growth-strategies");
+  };
   return (
     <div id="analytics" className="w-full bg-white py-16 px-4">
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2">
@@ -22,7 +28,10 @@ const Analytics = () => {
             business, our consultancy services are focused on maximizing
             efficiency and driving revenue growth.
           </p>
-          <button className="bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3 hover:scale-105 duration-300">
+          <button
+            onClick={handleButtonClick}
+            className="bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3 hover:scale-105 duration-300"
+          >
             Get Started
           </button>
         </div>
