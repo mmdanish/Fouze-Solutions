@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link to="/contact">Contact</Link>
         </li>
         <li className="p-4 hover:underline">
-          <Link to="/testimonials">Testimonials</Link>
+          <Link to="/testimonials">Services</Link>
         </li>
       </ul>
       <div onClick={handleNav} className="block md:hidden cursor-pointer">
@@ -51,9 +51,8 @@ const Navbar = () => {
         <Link to="/contact" onClick={handleNav}>Contact</Link>
         </li>
         <li className="p-4 border-b border-gray-600">
-        <Link to="/testimonials" onClick={handleNav}>Testimonials</Link>
+        <Link to="/services" onClick={handleNav}>Services</Link>
         </li>
-        <li className="p-4">Contact</li>
       </ul>
     </div>
   );

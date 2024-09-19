@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Cards = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact");
+  };
   return (
     <div className="w-full py-[5rem] px-4 bg-white">
       {/* Heading */}
@@ -27,7 +33,10 @@ const Cards = () => {
             ensures your business reaches its full potential, delivering
             measurable results.
           </p>
-          <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+          <button
+            onClick={handleClick}
+            className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3"
+          >
             Learn More
           </button>
         </div>
@@ -43,7 +52,10 @@ const Cards = () => {
             Build a powerful brand identity. We help you create a memorable
             image and voice that resonates with your audience.
           </p>
-          <button className="bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+          <button
+            onClick={handleClick}
+            className="bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3"
+          >
             Learn More
           </button>
         </div>
@@ -59,7 +71,12 @@ const Cards = () => {
             Proven success across industries. We work with you to achieve
             measurable results, ensuring satisfaction at every step.
           </p>
-          <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+          <button
+            className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3"
+            onClick={() => {
+              window.location.href = "/about#testimonials";
+            }}
+          >
             See Testimonials
           </button>
         </div>

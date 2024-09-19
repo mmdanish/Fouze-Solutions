@@ -81,7 +81,7 @@ const About = () => {
       </div>
 
       {/* Testimonial Section */}
-      <div className="bg-gray-100 py-12">
+      <div id="testimonials" className="bg-gray-100 py-12">
         <div className="max-w-[1240px] mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#00df9a]">
             What Our Clients Say
@@ -119,7 +119,7 @@ const About = () => {
         <button className="mt-6 bg-[#00df9a] text-black py-3 px-6 rounded-md hover:scale-105 transition-transform">
           Get in Touch
         </button>
-      </div>      
+      </div>
     </div>
   );
 };
