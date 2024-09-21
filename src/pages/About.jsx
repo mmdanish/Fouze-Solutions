@@ -1,8 +1,12 @@
 import React from "react";
 import Company from "../assets/company.png";
-
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/contact");
+  };
   return (
     <div className="w-full bg-white text-black py-16 px-4">
       {/* Hero Section */}
@@ -92,9 +96,7 @@ const About = () => {
                 "Fouze Solutions helped us transform our marketing strategy and
                 achieve 50% growth in just 6 months. Their team is outstanding!"
               </p>
-              <p className="mt-4 text-gray-700 font-bold">
-                - John Doe, CEO of XYZ Corp
-              </p>
+              <p className="mt-4 text-gray-700 font-bold">- Abrar Travels</p>
             </div>
             <div className="p-4 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
               <p className="text-lg italic">
@@ -102,7 +104,7 @@ const About = () => {
                 boosted efficiency across the board. We highly recommend them."
               </p>
               <p className="mt-4 text-gray-700 font-bold">
-                - Jane Smith, COO of ABC Ltd
+                - malabar marketing
               </p>
             </div>
           </div>
@@ -116,7 +118,10 @@ const About = () => {
           Contact us today to learn more about how we can help your business
           thrive.
         </p>
-        <button className="mt-6 bg-[#00df9a] text-black py-3 px-6 rounded-md hover:scale-105 transition-transform">
+        <button
+          onClick={handleClick}
+          className="mt-6 bg-[#00df9a] text-black py-3 px-6 rounded-md hover:scale-105 transition-transform"
+        >
           Get in Touch
         </button>
       </div>

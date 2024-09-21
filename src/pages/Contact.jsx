@@ -19,7 +19,8 @@ const Contact = () => {
           <p className="text-gray-800 font-bold">Contact Information:</p>
           <p className="text-gray-600">Email: info@fouze.in</p>
           <p className="text-gray-600">
-            Tel: +91 483 2736488, Fax: +91 483 2737488
+            Mob: +91 94954 88488, Tel: +91 483 2736488, <br />
+            Fax: +91 483 2737488
           </p>
           <p className="text-gray-600">
             Address: 1st Floor - Parambil Buildings, Big Bazaar Road,

@@ -57,7 +57,7 @@ const Footer = () => {
           <h6 className="font-medium text-gray-400">Contact Us</h6>
           <ul>
             <li className="py-2 text-sm">Email: info@fouze.in</li>
-            <li className="py-2 text-sm">Tel: +91 483 2736488</li>
+            <li className="py-2 text-sm">Mob: +91 94954 88488</li>
             <li className="py-2 text-sm"><a href="/contact" className="hover:underline">Contact Page</a></li>
           </ul>
         </div>

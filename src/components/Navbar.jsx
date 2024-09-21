@@ -22,10 +22,10 @@ const Navbar = () => {
           <Link to="/about">About</Link>
         </li>
         <li className="p-4 hover:underline">
-          <Link to="/contact">Contact</Link>
+          <Link to="/services">Services</Link>
         </li>
         <li className="p-4 hover:underline">
-          <Link to="/testimonials">Services</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
       <div onClick={handleNav} className="block md:hidden cursor-pointer">
@@ -42,16 +42,24 @@ const Navbar = () => {
           Fouze Solutions
         </h1>
         <li className="p-4 border-b border-gray-600">
-          <Link to="/" onClick={handleNav}>Home</Link>
+          <Link to="/" onClick={handleNav}>
+            Home
+          </Link>
         </li>
         <li className="p-4 border-b border-gray-600">
-        <Link to="/about" onClick={handleNav}>About</Link>
+          <Link to="/about" onClick={handleNav}>
+            About
+          </Link>
         </li>
         <li className="p-4 border-b border-gray-600">
-        <Link to="/contact" onClick={handleNav}>Contact</Link>
+          <Link to="/services" onClick={handleNav}>
+            Services
+          </Link>
         </li>
         <li className="p-4 border-b border-gray-600">
-        <Link to="/services" onClick={handleNav}>Services</Link>
+          <Link to="/contact" onClick={handleNav}>
+            Contact
+          </Link>
         </li>
       </ul>
     </div>

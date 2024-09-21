@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import GrowthStrategies from "./pages/GrowthStrategies";
 import ScrollToTop from "./components/ScrollToTop";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/growth-strategies" element={<GrowthStrategies />} />
       </Routes>
       <Footer />
