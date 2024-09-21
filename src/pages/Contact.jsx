@@ -1,11 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import {
   FaWhatsappSquare,
   FaFacebookSquare,
   FaTwitterSquare,
 } from "react-icons/fa";
+import Modal from "../components/Modal";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        e.target,
+        "YOUR_USER_ID" // Replace with your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setModalMessage("Message Send Successfully!");
+          setIsModalOpen(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setModalMessage("An error occurred. Please try again.");
+          setIsModalOpen(true);
+        }
+      );
+
+    setFormData({ name: "", email: "", message: "" });
+  };
   return (
     <div className="w-full bg-gray-100 py-16 px-4">
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8">
@@ -35,7 +75,7 @@ const Contact = () => {
 
         {/* Right side - Contact Form */}
         <div className="bg-white p-8 shadow-lg rounded-lg">
-          <form action="" method="">
+          <form onSubmit={sendEmail}>
             <div className="mb-4">
               <label
                 className="block text-gray-600 text-sm font-bold mb-2"
@@ -49,6 +89,8 @@ const Contact = () => {
                 name="name"
                 className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
@@ -64,6 +106,8 @@ const Contact = () => {
                 name="email"
                 className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 placeholder="Enter your email"
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
@@ -79,6 +123,8 @@ const Contact = () => {
                 rows="4"
                 className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 placeholder="Enter your message"
+                value={formData.message}
+                onChange={handleChange}
               ></textarea>
             </div>
             <button
@@ -88,6 +134,14 @@ const Contact = () => {
               Send Message
             </button>
           </form>
+
+          {/* Render the modal if the state is true */}
+          {isModalOpen && (
+            <Modal
+              message={modalMessage}
+              onClose={() => setIsModalOpen(false)}
+            />
+          )}
         </div>
       </div>
       <div className="w-full mt-8">
