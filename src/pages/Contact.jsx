@@ -64,7 +64,7 @@ const Contact = () => {
           </p>
           <p className="text-gray-600">
             Address: 1st Floor - Parambil Buildings, Big Bazaar Road,
-            Kizhekkethala Down Hill - 676519, Malappuram, Kerala, India
+            Kizhekkethala <br /> Down Hill - 676519, Malappuram, Kerala, India
           </p>
           <div className="flex space-x-4 py-4 md:w-[75%] cursor-pointer">
             <FaFacebookSquare size={30} />

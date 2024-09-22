@@ -75,11 +75,6 @@ const GrowthStrategies = () => {
               recommendation is based on proven data.
             </li>
             <li>
-              <strong>Expert Team:</strong> Our team consists of industry
-              experts with years of experience in business consultancy,
-              marketing, and growth strategies.
-            </li>
-            <li>
               <strong>End-to-End Support:</strong> From strategy development to
               execution, we support you every step of the way, ensuring that
               your growth journey is smooth and successful.
