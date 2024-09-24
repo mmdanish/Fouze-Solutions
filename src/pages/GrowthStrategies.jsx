@@ -14,16 +14,16 @@ const GrowthStrategies = () => {
           <h1 className="text-4xl font-bold py-4">
             Tailored Growth Strategies for Your Business
           </h1>
-          <p className="text-lg py-2 text-black-600">
+          <p className="text-lg py-2 text-black-600 text-justify">
             At Fouze Solutions, we specialize in helping businesses unlock their
             potential for growth by crafting customized strategies that drive
             success. Whether you're a startup looking to scale or an established
-            business aiming to expand, our team of experts is here to guide you
-            through every stage of your growth journey.
+            business aiming to expand, we are here to guide you through every
+            stage of your growth journey.
           </p>
 
           <h2 className="text-2xl font-semibold py-4">Our Core Services</h2>
-          <ul className="list-disc list-inside space-y-2 text-black-600">
+          <ul className="list-disc space-y-2 text-black-600 text-justify pl-4">
             <li>
               <strong>Market Research & Analysis:</strong> We dive deep into
               your market to understand customer behavior, competitive
@@ -56,14 +56,14 @@ const GrowthStrategies = () => {
           <h2 className="text-2xl font-semibold py-4">
             Why Choose Fouze Solutions?
           </h2>
-          <p className="py-2 text-black-600">
+          <p className="py-2 text-black-600 text-justify">
             Fouze Solutions stands out because of our commitment to providing
             personalized solutions that align with your business goals. We
             leverage our extensive experience in marketing and business
             consultancy to ensure you achieve measurable and sustainable growth.
             Here's what sets us apart:
           </p>
-          <ul className="list-disc list-inside space-y-2 text-black-600">
+          <ul className="list-disc space-y-2 text-black-600 text-justify pl-4">
             <li>
               <strong>Customized Solutions:</strong> We understand that no two
               businesses are alike, and we tailor our services to meet your

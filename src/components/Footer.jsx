@@ -20,7 +20,9 @@ const Footer = () => {
           <FaFacebookSquare size={30} />
           <FaInstagram size={30} />
           <FaTwitterSquare size={30} />
-          <FaWhatsappSquare size={30} />
+          <a href="http://wa.me/+919495488488?text=Hello" target="_blank" rel="noopener noreferrer">
+            <FaWhatsappSquare size={30} />
+          </a>
         </div>
       </div>
       <div className="lg:col-span-2 flex justify-between mt-6">
@@ -58,7 +60,11 @@ const Footer = () => {
           <ul>
             <li className="py-2 text-sm">Email: info@fouze.in</li>
             <li className="py-2 text-sm">Mob: +91 94954 88488</li>
-            <li className="py-2 text-sm"><a href="/contact" className="hover:underline">Contact Page</a></li>
+            <li className="py-2 text-sm">
+              <a href="/contact" className="hover:underline">
+                Contact Page
+              </a>
+            </li>
           </ul>
         </div>
       </div>

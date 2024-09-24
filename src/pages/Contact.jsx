@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import {
+  FaClock,
+  FaQuestionCircle,
+  FaShareAlt,
+  FaLightbulb,
+} from "react-icons/fa";
+import {
   FaWhatsappSquare,
   FaFacebookSquare,
   FaTwitterSquare,
@@ -11,6 +17,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
+    subject: "",
     message: "",
   });
 
@@ -23,6 +31,13 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Form Validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setModalMessage("Please fill out all required fields.");
+      setIsModalOpen(true);
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -44,95 +59,106 @@ const Contact = () => {
         }
       );
 
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
   };
   return (
     <div className="w-full bg-gray-100 py-16 px-4">
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8">
         {/* Left side - contact Info */}
-        <div className="flex flex-col justify-center">
-          <h2 className="text-3xl font-bold text-gray-800">Get in Touch</h2>
+        <div className="flex flex-col justify-center text-justify">
+          <h2 className="text-4xl font-bold text-gray-800">Get in Touch</h2>
           <p className="text-gray-600 py-4">
             If you have any questions or want to talk about how we can help your
             business grow, feel free to reach out!
           </p>
           <p className="text-gray-800 font-bold">Contact Information:</p>
-          <p className="text-gray-600">Email: info@fouze.in</p>
-          <p className="text-gray-600">
-            Mob: +91 94954 88488, Tel: +91 483 2736488, <br />
-            Fax: +91 483 2737488
-          </p>
           <p className="text-gray-600">
             Address: 1st Floor - Parambil Buildings, Big Bazaar Road,
             Kizhekkethala <br /> Down Hill - 676519, Malappuram, Kerala, India
           </p>
-          <div className="flex space-x-4 py-4 md:w-[75%] cursor-pointer">
-            <FaFacebookSquare size={30} />
-            <FaWhatsappSquare size={30} />
-            <FaTwitterSquare size={30} />
-          </div>
+          <p className="text-gray-600">
+            Tel: +91 483 2736488, Fax: +91 483 2737488 <br />
+            Mob: +91 94954 88488
+          </p>
+          <p className="text-gray-600">Email: info@fouze.in</p>
         </div>
 
-        {/* Right side - Contact Form */}
+        {/* Right Side - Expanded Form */}
         <div className="bg-white p-8 shadow-lg rounded-lg">
-          <form onSubmit={sendEmail}>
-            <div className="mb-4">
-              <label
-                className="block text-gray-600 text-sm font-bold mb-2"
-                htmlFor="name"
-              >
+          <form onSubmit={sendEmail} className="grid grid-cols-2 gap-4">
+            <div className="col-span-2 md:col-span-1">
+              <label className="block text-gray-600 text-sm font-bold mb-2">
                 Name
               </label>
               <input
                 type="text"
-                id="name"
                 name="name"
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                placeholder="Enter your name"
+                placeholder="Your Name"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
                 value={formData.name}
                 onChange={handleChange}
               />
             </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-600 text-sm font-bold mb-2"
-                htmlFor="email"
-              >
+            <div className="col-span-2 md:col-span-1">
+              <label className="block text-gray-600 text-sm font-bold mb-2">
                 Email
               </label>
               <input
                 type="email"
-                id="email"
                 name="email"
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                placeholder="Enter your email"
+                placeholder="Your Email"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
                 value={formData.email}
                 onChange={handleChange}
               />
             </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-600 text-sm font-bold mb-2"
-                htmlFor="message"
-              >
+            <div className="col-span-2">
+              <label className="block text-gray-600 text-sm font-bold mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone Number"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="col-span-2">
+              <label className="block text-gray-600 text-sm font-bold mb-2">
+                Subject
+              </label>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
+                value={formData.subject}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="col-span-2">
+              <label className="block text-gray-600 text-sm font-bold mb-2">
                 Message
               </label>
               <textarea
-                id="message"
                 name="message"
-                rows="4"
-                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-                placeholder="Enter your message"
+                rows="6"
+                placeholder="Your Message"
+                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none"
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600"
-            >
-              Send Message
-            </button>
+            <div className="col-span-2">
+              <button
+                type="submit"
+                className="w-full bg-green-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-600"
+              >
+                Send Message
+              </button>
+            </div>
           </form>
 
           {/* Render the modal if the state is true */}
@@ -144,18 +170,63 @@ const Contact = () => {
           )}
         </div>
       </div>
-      <div className="w-full mt-8">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d562.2626336769714!2d76.07074953250043!3d11.051839349603208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1726756307687!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          frameBorder="0"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          aria-hidden="false"
-          tabIndex="0"
-          title="Map showing our business location"
-        ></iframe>
+
+      {/* Additional Content Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        {/* Mission Card */}
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-bold flex items-center">
+            <span className="mr-2">
+              <FaLightbulb size={24} />
+            </span>
+            Our Mission
+          </h3>
+          <p className="text-gray-600 mt-2">
+            We aim to provide exceptional service and support to help your
+            business thrive.
+          </p>
+        </div>
+
+        {/* Working Hours Card */}
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-bold flex items-center">
+            <span className="mr-2">
+              <FaClock size={24} />
+            </span>
+            Working Hours
+          </h3>
+          <p className="text-gray-600 mt-2">Monday to Friday: 9 AM - 6 PM</p>
+        </div>
+
+        {/* FAQs Card */}
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-bold flex items-center">
+            <span className="mr-2">
+              <FaQuestionCircle size={24} />
+            </span>
+            FAQs
+          </h3>
+          <p className="text-gray-600 mt-2">
+            How long does it take to respond? We aim to respond within 24 hours.
+          </p>
+        </div>
+
+        {/* Social Media Card */}
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-bold flex items-center">
+            <span className="mr-2">
+              <FaShareAlt size={24} />
+            </span>
+            Follow Us
+          </h3>
+          <div className="flex space-x-4 mt-2 cursor-pointer">
+            <a href="http://wa.me/+919495488488?text=Hello" target="_blank" rel="noopener noreferrer">
+              <FaWhatsappSquare size={30} />
+            </a>
+            <FaFacebookSquare size={30} />
+            <FaTwitterSquare size={30} />
+          </div>
+        </div>
       </div>
     </div>
   );
