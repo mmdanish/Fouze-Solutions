@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import {
   FaClock,
   FaQuestionCircle,
@@ -39,27 +38,36 @@ const Contact = () => {
       return;
     }
 
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        e.target,
-        "YOUR_USER_ID" // Replace with your EmailJS user ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setModalMessage("Message Send Successfully!");
-          setIsModalOpen(true);
-        },
-        (error) => {
-          console.log(error.text);
-          setModalMessage("An error occurred. Please try again.");
-          setIsModalOpen(true);
-        }
-      );
+    // Google Apps Script Web App URL
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbzR5arkVd7Fa-izbuaSFlzJaC0Q676ts4O6QxauWS9jLxn_6hBsr4ITBuakueaqeSkQ/exec"
 
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    // Send data to Google Apps Script
+    fetch(scriptURL, {
+      method: "POST",
+      body: new URLSearchParams(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result === "success") {
+          setModalMessage("Message Sent Successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          });
+        } else {
+          setModalMessage("An error occurred. Please try again.");
+        }
+        setIsModalOpen(true);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setModalMessage("An error occurred. Please try again.");
+        setIsModalOpen(true);
+      });
   };
   return (
     <div className="w-full bg-gray-100 py-16 px-4">
@@ -220,7 +228,11 @@ const Contact = () => {
             Follow Us
           </h3>
           <div className="flex space-x-4 mt-2 cursor-pointer">
-            <a href="http://wa.me/+919495488488?text=Hello" target="_blank" rel="noopener noreferrer">
+            <a
+              href="http://wa.me/+919495488488?text=Hello"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaWhatsappSquare size={30} />
             </a>
             <FaFacebookSquare size={30} />

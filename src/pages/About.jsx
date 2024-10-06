@@ -104,7 +104,7 @@ const About = () => {
                 boosted efficiency across the board. We highly recommend them."
               </p>
               <p className="mt-4 text-gray-700 font-bold">
-                - malabar marketing
+                - Malabar marketing
               </p>
             </div>
           </div>
