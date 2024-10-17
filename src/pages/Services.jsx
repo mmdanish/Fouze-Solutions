@@ -10,8 +10,10 @@ const Services = () => {
     <div className="w-full bg-white text-black py-16 px-4">
       {/* Hero Section */}
       <div className="max-w-[1240px] mx-auto text-center py-16">
-        <h1 className="text-4xl font-bold text-[#00df9a]">Our Services</h1>
-        <p className="mt-4 text-4xl">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#00df9a]">
+          Our Services
+        </h1>
+        <p className="mt-4 text-xl md:text-2xl text-center">
           We provide a range of services to help your business thrive in the
           digital age. Our services are designed to cater to all your marketing
           and business needs.
@@ -19,7 +21,7 @@ const Services = () => {
       </div>
 
       {/* Services section */}
-      <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8 py-16">
+      <div className="max-w-[1240px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-16">
         {/* Service 1 */}
         <div className="bg-gray-100 p-8 rounded-lg shadow-md text-center cursor-pointer hover:scale-105 duration-300">
           <h3 className="text-2xl font-bold">Digital Marketing</h3>
@@ -48,10 +50,10 @@ const Services = () => {
 
       {/* Why Choose Us Section */}
       <div className="max-w-[1240px] mx-auto py-16">
-        <h2 className="text-3xl font-bold text-center text-[#00df9a]">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-[#00df9a]">
           Why Choose Our Services
         </h2>
-        <div className="grid md:grid-cols-3 gap-8 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           <div className="bg-gray-100 p-8 rounded-lg shadow-md text-center cursor-pointer hover:scale-105 duration-300">
             <h3 className="text-2xl font-bold">Expertise</h3>
             <p className="mt-4 text-gray-600">
@@ -76,7 +78,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Testimonial Section */}
+      {/* Testimonial Section
       <div className="bg-gray-100 py-12">
         <div className="max-w-[1240px] mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#00df9a]">
@@ -101,18 +103,20 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>  */}
 
       {/* Call to Action */}
       <div className="max-w-[1240px] mx-auto py-16 text-center">
-        <h2 className="text-3xl font-bold">Ready To Elevate Your Business?</h2>
-        <p className="mt-4 text-xl text-gray-600">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          Ready To Elevate Your Business?
+        </h2>
+        <p className="mt-4 text-lg md:text-xl text-gray-600">
           Let us know how we can help you grow. Get in touch today to discuss
           our services in more detail.
         </p>
         <button
           onClick={handleClick}
-          className="mt-6 bg-[#00df9a] text-black py-3 px-6 rounded-md hover:scale-105 transition-transform"
+          className="mt-6 bg-[#00df9a] text-black py-2 px-4 md:py-3 md:px-6 rounded-md hover:scale-105 transition-transform"
         >
           Contact Us
         </button>

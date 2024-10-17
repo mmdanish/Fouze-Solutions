@@ -9,7 +9,7 @@ const Explore = () => {
           <h1 className="md:text-4xl sm:text-3xl text-2xl font-bold py-2">
             Unlock Your Business Potential with Expert Guidance
           </h1>
-          <p className="py-2">
+          <p className="py-2 text-justify">
             Our team of seasoned consultants is here to help you navigate the
             complexities of modern business. Whether you're looking to refine
             your strategy, boost your marketing efforts, or drive growth, we
@@ -23,7 +23,7 @@ const Explore = () => {
             >
               Explore Our Services
             </a>
-            <p className="py-2">
+            <p className="py-2 text-justify">
               Ready to take the next step? Contact us today to discuss your
               business goals and how we can help you achieve them. {""}
               <a href="/contact" className="text-[#00df9a] hover:underline">

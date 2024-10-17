@@ -81,8 +81,8 @@ const Contact = () => {
           </p>
           <p className="text-gray-800 font-bold">Contact Information:</p>
           <p className="text-gray-600">
-            Address: 1st Floor - Parambil Buildings, Big Bazaar Road,
-            Kizhekkethala <br /> Down Hill - 676519, Malappuram, Kerala, India
+            Address: Fouze Solutions, 1st Floor - Parambil Buildings <br /> Big Bazaar Road,
+            Kizhekkethala Down Hill - 676519 <br /> Malappuram, Kerala, India
           </p>
           <p className="text-gray-600">
             Tel: +91 483 2736488, Fax: +91 483 2737488 <br />

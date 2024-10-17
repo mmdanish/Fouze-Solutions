@@ -17,13 +17,13 @@ const Analytics = () => {
           <h1 className="md:text-4xl sm:text-3xl test-2xl font-bold py-2">
             Unlock New Growth Opportunities
           </h1>
-          <p className="py-2">
+          <p className="py-2 text-justify">
             Our tailored strategies are designed to help you achieve sustainable
             business growth. From market analysis to business planning, we work
             with you to identify new opportunities, streamline operations, and
             optimize your marketing efforts.
           </p>
-          <p className="py-2">
+          <p className="py-2 text-justify">
             Whether you are scaling a startup or expanding an established
             business, our consultancy services are focused on maximizing
             efficiency and driving revenue growth.
