@@ -10,9 +10,10 @@ import Services from "./pages/Services";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Fouze-Solutions">
       <Navbar />
       <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -20,6 +21,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/growth-strategies" element={<GrowthStrategies />} />
       </Routes>
+
       <Footer />
     </Router>
   );
