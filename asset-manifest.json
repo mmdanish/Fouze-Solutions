@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Fouze-Solutions/static/css/main.f245d4e8.css",
+    "main.js": "/Fouze-Solutions/static/js/main.43e75670.js",
+    "static/media/business-growth.png": "/Fouze-Solutions/static/media/business-growth.7777bba4f86f6d8dcecc.png",
+    "static/media/company.png": "/Fouze-Solutions/static/media/company.76eb58ea034866e0cfef.png",
+    "static/media/strategies.png": "/Fouze-Solutions/static/media/strategies.7816c7720d8da35921e1.png",
+    "static/media/laptop.jpg": "/Fouze-Solutions/static/media/laptop.45ddf500e572fb2f1d35.jpg",
+    "index.html": "/Fouze-Solutions/index.html",
+    "main.f245d4e8.css.map": "/Fouze-Solutions/static/css/main.f245d4e8.css.map",
+    "main.43e75670.js.map": "/Fouze-Solutions/static/js/main.43e75670.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f245d4e8.css",
+    "static/js/main.43e75670.js"
+  ]
+}
